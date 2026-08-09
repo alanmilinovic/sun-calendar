@@ -4,7 +4,7 @@ from datetime import datetime, timezone, timedelta
 import pytz
 
 def get_sun_events(current_date):
-    # API call for sunrise and sunset times in San Francisco, CA
+    # API call for sunrise and sunset times in Valencia, Spain
     sun_times_url = f"https://api.sunrise-sunset.org/json?lat=39.4699&lng=-0.3763&date={current_date}"
     sun_times_url += f"&date={current_date}"
     print(f"sun_times_url: {sun_times_url}")
