@@ -11,7 +11,7 @@ Github: [https://github.com/alanmilinovic/sun-calendar](https://github.com/alanm
 Subscribe to this link ("by URL") in your calendar app: 
 
 ```
-webcal://www.averychan.site/sun-calendar/sun.ics
+webcal://alanmilinovic.github.io/sun-calendar/sun.ics
 ```
 
 👆 If you fork it for yourself, your URL will be different
