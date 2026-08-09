@@ -22,6 +22,7 @@ def get_sun_events(current_date):
 
     time_format = "%I:%M:%S %p"  # format that matches the time strings in the response
     year, month, day = map(int, current_date.split('-'))
+
     # Convert the strings to datetime objects
     datetime_objects = {
         key: datetime.strptime(value, time_format).replace(tzinfo=pytz.utc)
@@ -54,10 +55,6 @@ def get_sun_events(current_date):
 
 c = Calendar()
 
-# Calendar name and description
-c.extra.append(("X-WR-CALNAME", "Sunrise and Sunset for Valencia"))
-c.extra.append(("X-WR-CALDESC", "Sunrise and Sunset for Valencia"))
-
 current_date = datetime.now(timezone.utc).strftime('%Y-%m-%d')
 
 # get dates for today and next 6 days
@@ -70,4 +67,15 @@ for date in dates:
         c.events.add(event)
 
 with open('sun.ics', 'w') as f:
-    f.writelines(c.serialize_iter())
+    ics_content = ''.join(c.serialize_iter())
+
+    # Add calendar name and description
+    ics_content = ics_content.replace(
+        "BEGIN:VCALENDAR",
+        "BEGIN:VCALENDAR\r\n"
+        "X-WR-CALNAME:Sunrise and Sunset for Valencia\r\n"
+        "X-WR-CALDESC:Sunrise and Sunset for Valencia",
+        1
+    )
+
+    f.write(ics_content)
