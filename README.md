@@ -2,7 +2,7 @@
 
 [//]: # (Comment so I can update the file to trigger activity: .)
 
-A simple ICS calendar that shows daily sunrise & sunset times in **San Francisco**.  
+A simple ICS calendar that shows daily sunrise & sunset times in **Valencia**.  
 
 Github: [https://github.com/Avery2/sun-calendar](https://github.com/Avery2/sun-calendar)
 
@@ -36,7 +36,7 @@ Sunrise and Sunset times for the current week should appear in your calendar lik
     - Uses this awesome free sun API: https://sunrise-sunset.org/api
     - Uses isc python library https://icspy.readthedocs.io/en/stable/
 - The isc file is exposed by hosting on GH pages
-- Location is set to San Francisco by default
+- Location is set to Valencia by default
 - If you want to use a different location, change the lat and long coordinates in `create_calendar_local.py`
     - You can get the lat and long coordinates from google maps by right clicking
     - If you want it to auto-update, you'll have to fork this and host it on your own github pages. You'll have to update the workflow file to point to your repo too.
