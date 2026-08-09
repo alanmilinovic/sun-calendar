@@ -4,8 +4,6 @@
 
 A simple ICS calendar that shows daily sunrise & sunset times in **Valencia**.  
 
-Github: [https://github.com/alanmilinovic/sun-calendar](https://github.com/alanmilinovic/sun-calendar)
-
 ## 🗓️ Usage
 
 Subscribe to this link ("by URL") in your calendar app: 
