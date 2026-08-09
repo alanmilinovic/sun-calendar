@@ -58,4 +58,5 @@ jobs:
         run: |
           git add sun.ics
           git commit -m "Update sun.ics [skip ci]" || echo "No changes to commit"
+          git pull --rebase origin main
           git push origin HEAD:main
